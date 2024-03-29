@@ -2,7 +2,7 @@
 using namespace std;
 
 bool isInclude(int i){
-    int divide = 1;
+    int divide = 10;
 
     if (i % 10 == 3){
         return true;
