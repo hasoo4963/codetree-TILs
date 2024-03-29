@@ -4,6 +4,7 @@ using namespace std;
 bool isInclude(int i){
     int divide = 10;
 
+    // 1의 자리 숫자 확인
     if (i % 10 == 3){
         return true;
     }
@@ -14,7 +15,8 @@ bool isInclude(int i){
         return true;
     }
 
-    for (int x = 0; x <=6; x++){
+    // 10의 자리부터 끝자리 숫자 (최대 1,000,000)까지 확인
+    for (int x = 0; x < 5; x++){
         if(i/divide == 3){
             return true;
         }
@@ -29,10 +31,12 @@ bool isInclude(int i){
         }
     }
 
+    //수 전체에 3 또는 6 또는 9가 하나도 없으로 false return
     return false;
 }
 
 bool isDivide3(int i){
+    //3의 배수인지 확인하고 알맞은 값 return
     if (i % 3 == 0){
         return true;
     }
@@ -52,7 +56,7 @@ bool isMagicNumber(int i){
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    int a,b;
+    int a, b;
     cin >> a >> b;
     int count = 0;
     for (int i = a; i <= b; i++){
