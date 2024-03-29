@@ -18,7 +18,7 @@ int main() {
     int sum = 0;
 
     for (int i = a; i <= b; i++){
-        if (i == 1 || i == 2){
+        if (i == 2){
             sum += i;
         }
         else if(isPrime(i)){
