@@ -14,7 +14,7 @@ bool isInclude(int i){
         return true;
     }
 
-    for (int x = 0; x < 5; x++){
+    for (int x = 0; x <=6; x++){
         if(i/divide == 3){
             return true;
         }
