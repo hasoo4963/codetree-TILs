@@ -2,6 +2,13 @@
 using namespace std;
 
 bool isPrime(int n){
+    if (n == 1){
+        return false;
+    }
+    else if (n == 2){
+        return true;
+    }
+
     for(int i = 2; i < n; i++){
         if (n%i == 0){
             return false;
@@ -18,10 +25,7 @@ int main() {
     int sum = 0;
 
     for (int i = a; i <= b; i++){
-        if (i == 2){
-            sum += i;
-        }
-        else if(isPrime(i)){
+        if(isPrime(i)){
             sum += i;
         }
     }
