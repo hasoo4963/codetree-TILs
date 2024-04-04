@@ -33,8 +33,7 @@ bool isAvailable(int year, int month, int day){
                 return true;
             } else if (datArray[month] == 0 && day <= 30){
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
@@ -42,6 +41,8 @@ bool isAvailable(int year, int month, int day){
     else {
         if (month == 2 && day <= 28){
             return true;
+        } else if (month == 2 && day > 28){
+            return false;
         } else if(datArray[month] == 1 && day <= 31){
             return true;
         } else if (datArray[month] == 0 && day <= 30){
