@@ -17,7 +17,10 @@ bool isLeapYear(int year){
     return false;
 }
 
-bool isAvailable(int year,int month,int day){
+bool isAvailable(int year, int month, int day){
+
+    int datArray[13] = {0,1,0,1,0,1,0,1,1,0,1,0,1};
+
     if(isLeapYear(year)){
         if(month == 2){
             if(day <= 29){
@@ -26,11 +29,26 @@ bool isAvailable(int year,int month,int day){
                 return false;
             }
         } else {
-            return true;
+            if(datArray[month] == 1 && day <= 31){
+                return true;
+            } else if (datArray[month] == 0 && day <= 30){
+                return true;
+            }
+            else {
+                return false;
+            }
         }
     }
     else {
-        return true;
+        if (month == 2 && day <= 28){
+            return true;
+        } else if(datArray[month] == 1 && day <= 31){
+            return true;
+        } else if (datArray[month] == 0 && day <= 30){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
@@ -61,7 +79,7 @@ int main() {
     int year, month, day;
     cin >> year >> month >> day;
 
-    printSeason(year,month,day);
+    printSeason(year, month, day);
 
     return 0;
 }
