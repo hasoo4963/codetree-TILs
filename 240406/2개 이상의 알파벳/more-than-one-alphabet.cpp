@@ -9,7 +9,7 @@ bool isThereUp2(string a){
     for (int i = 0; i < length; i++){
         init = a[i];
         for (int x = 1; x < length; x++){
-            if (a[x] == init){
+            if (a[x] != init){
                 return true;
             }
         }
