@@ -10,7 +10,7 @@ for i in range(N):
     height, weight = input().split()
     bodyArr.append(Body(int(height),int(weight),i+1))
 
-bodyArr.sort(key = lambda x : (-x.height, -x.weight, -x.number))
+bodyArr.sort(key = lambda x : (-x.height, -x.weight, x.number))
 
 for bd in bodyArr:
     print(bd.height, bd.weight, bd.number)
