@@ -8,7 +8,15 @@ N = int(input())
 pointArr = []
 for i in range(N):
     tempArr = input().split()
-    pointArr.append(point(int(tempArr[0]), int(tempArr[1]), i + 1))
+    
+    x = int(tempArr[0])
+    y = int(tempArr[1])
+
+    if x < 0:
+        x *= -1
+    if y < 0:
+        y *= -1
+    pointArr.append(point(x, y, i + 1))
 
 pointArr.sort(key = lambda point: (point.x + point.y, point.number))
 
