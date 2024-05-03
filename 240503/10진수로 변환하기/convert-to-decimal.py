@@ -1,4 +1,4 @@
-binary = [1,1,1,0,1]
+binary = list(map(int, input()))
 num = 0
 
 j = 0
