@@ -11,4 +11,7 @@ miniute_start = 11
 first_time = (60*24*day_start) + (60*hour_start) + miniute_start
 last_time = (60*24*a) + (60*b) + c
 
-print(last_time - first_time)
+if first_time > last_time:
+    print(-1)
+else:
+    print(last_time - first_time)
