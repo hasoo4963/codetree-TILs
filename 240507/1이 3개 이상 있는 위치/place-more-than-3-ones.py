@@ -1,11 +1,3 @@
-# a = [[0, 0, 0, 1, 0],
-#      [0, 1, 1, 1, 0],
-#      [0, 0, 0, 0, 1],
-#      [1, 0, 1, 1, 1],
-#      [1, 0, 1, 1, 0]]
-
-# x, y = 2, 4
-
 def in_range(x, y, n):
     return 0 <= x < n and 0 <= y < n
 
@@ -24,9 +16,10 @@ def isExist1(arr_2d, x, y):
 
 
 n = int(input())
-arr_2d = []
-for i in range(n):
-    arr_2d.append(list(map(int, input().split())))
+arr_2d = [ 
+    list(map(int, input().split()))
+    for _ in range(n)
+]
 
 cnt = 0
 
@@ -36,8 +29,3 @@ for i in range(n):
             cnt += 1
 
 print(cnt)
-
-
-# for i in range(len(arr_2d)):
-#     for j in range(len(arr_2d[i])):
-#         print(arr_2d[i][j])
