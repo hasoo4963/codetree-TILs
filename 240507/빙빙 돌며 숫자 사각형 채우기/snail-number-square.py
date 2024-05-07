@@ -37,7 +37,7 @@
 #     print()
 
 def inRange(x, y, n, m):
-    return 0 <= x < m and 0 <= y < n
+    return 0 <= x < n and 0 <= y < m
 
 dxs = [0,1,0,-1]
 dys = [1,0,-1,0]
@@ -52,7 +52,7 @@ x, y = 0, 0
 dir_num = 0
 arr_2d[x][y] = 1
 
-for i in range(2, n*n + 1):
+for i in range(2, n*m + 1):
     dx = x + dxs[dir_num]
     dy = y + dys[dir_num]
 
