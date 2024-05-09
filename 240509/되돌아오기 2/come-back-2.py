@@ -20,7 +20,7 @@ for i in range(n):
         now_pos = (now_pos + 1) % 4
         t += 1
     else:
-        now_pos = (now_pos + 4) % 4
+        now_pos = (now_pos + 3) % 4
         t += 1
 
     if x == 0 and y == 0:
