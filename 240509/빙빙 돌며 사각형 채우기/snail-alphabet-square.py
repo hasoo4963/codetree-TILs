@@ -20,6 +20,8 @@ start_ascii = 65
 arr_2d[x][y] = chr(start_ascii)
 for _ in range(1, n*m):
     start_ascii += 1
+    if start_ascii > 90:
+        start_ascii = 65
 
     dx, dy = x + dxs[now_pos], y + dys[now_pos]
 
