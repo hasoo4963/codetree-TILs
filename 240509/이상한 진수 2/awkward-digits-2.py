@@ -11,10 +11,10 @@ length = len(S)
 sum = 0
 
 if length == 1:
-    if S[i] == "1":
-        S[i] = "0"
+    if S[0] == "1":
+        S[0] = "0"
     else:
-        S[i] = "1"
+        S[0] = "1"
 #length가 1인지 검사해 적절한 조치 취하기
 else:
     if isAll1(S):
